@@ -228,3 +228,103 @@ nav .profile-area .profile-photo img{
 nav .profile-area button{
     display: none;
 }
+
+.arrow-down{
+    cursor: pointer;
+}
+
+/*********** Asise and side-bar ***********/
+
+main{
+    display: grid;
+    grid-template-columns: 16rem  auto 30rem;
+    gap: 2rem;
+    margin:1rem auto 4rem;
+    
+    width: 96%;
+}
+
+main aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 88vh;
+}
+
+/* Displayed on mobile and tablet views only */
+main aside #close-btn{
+    display: none;
+}
+
+main aside .side-bar a{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    height: 4.2rem;
+    color: var(--color-gray-light);
+    position: relative;
+}
+
+main aside .side-bar a span{
+    margin-left: 3rem;
+    font-size: 1.7rem;
+    transition: all 0.3s ease;
+}
+
+main aside .side-bar a.active{
+    color: var(--color-primary);
+    background-color: var(--color-white);
+}
+
+main aside .side-bar a.active::before{
+    content: "";
+    width:6px;
+    height: 100%;
+    background-color: var(--color-primary);
+    position: absolute;
+}
+
+main aside .side-bar a:hover{
+    color: var(--color-primary);
+}
+
+main aside .side-bar a:hover span{
+    margin-left:2rem;
+}
+
+main aside .side-bar a h4{
+    font-weight: 900;
+}
+
+/***********updates ***********/
+
+main aside .updates{
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-2);
+    padding: var(--card-padding);
+    text-align: center;
+}
+
+main aside .updates span{
+    font-size: 2.8rem;
+}
+
+main aside .updates h4{
+    margin:1rem 0;
+}
+
+main aside .updates a{
+    background-color: var(--color-primary);
+    color:var(--color-white);
+    padding: 0.8rem 0;
+    border-radius: var(--border-radius-1);
+    width: 100%;
+    display: block;
+    margin-top: 2rem;
+    transition: all .3s ease;
+}
+
+main aside .updates a:hover{
+    box-shadow: 0 1rem 2rem var(--color-primary-light);
+}
+
