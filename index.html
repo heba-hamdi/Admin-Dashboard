@@ -8,6 +8,8 @@
     <title>Admin Dashboard</title>
     <!-- Material icons cdn -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    
+
     <!-- Google fonts (Roboto) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -221,7 +223,113 @@
                     </div>
                 </div>
             </div>
-            <!-- End of cards -->
+
+            <!-- Start of monthly report -->
+            <div class="monthly-report">
+                <div class="report">
+                    <h3>Income</h3>
+                    <details>
+                        <h2>29,023</h2>
+                        <h6 class="success">+2.6%</h6>
+                        <p class="text-muted">Compared to 26,938 last month</p>
+                    </details>
+                </div>
+
+
+
+                <div class="report">
+                    <h3>Expenses</h3>
+                    <details>
+                        <h2>9,005</h2>
+                        <h6 class="danger">-6.5%</h6>
+                        <p class="text-muted">Compared to 11,938 last month</p>
+                    </details>
+                </div>
+
+
+                <div class="report">
+                    <h3>Cashback</h3>
+                    <details>
+                        <h2>4,007</h2>
+                        <h6 class="success">+7.1%</h6>
+                        <p class="text-muted">Compared to 3,983 last month</p>
+                    </details>
+                </div>
+
+
+                <div class="report">
+                    <h3>Turnover</h3>
+                    <details>
+                        <h2>118,900</h2>
+                        <h6 class="danger">-17.8%</h6>
+                        <p class="text-muted">Compared to 136,981 last month</p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- start of fast payment -->
+            <div class="fast-payment">
+            <h2>Fast Payment</h2>
+            <div class="badges">
+                <div class="badge">
+                    <span class="material-icons-sharp">
+                        add
+                        </span>
+                </div>
+
+                <div class="badge">
+                    <span class="bg-primary"></span>
+                    <div>
+                        <h5>Training</h5>
+                        <h4>$50</h4>
+                    </div>
+                </div>
+                <div class="badge">
+                    <span class="bg-success"></span>
+                    <div>
+                        <h5>Internet</h5>
+                        <h4>$50</h4>
+                    </div>
+                </div>
+                <div class="badge">
+                    <span class="bg-primary"></span>
+                    <div>
+                        <h5>Gaz</h5>
+                        <h4>$195</h4>
+                    </div>
+                </div>
+                <div class="badge">
+                    <span class="bg-danger"></span>
+                    <div>
+                        <h5>Movies</h5>
+                        <h4>$39</h4>
+                    </div>
+                </div>
+                <div class="badge">
+                    <span class="bg-primary"></span>
+                    <div>
+                        <h5>Education</h5>
+                        <h4>$999</h4>
+                    </div>
+                </div>
+                <div class="badge">
+                    <span class="bg-danger"></span>
+                    <div>
+                        <h5>Electricity</h5>
+                        <h4>$109</h4>
+                    </div>
+                </div>
+                <div class="badge">
+                    <span class="bg-success"></span>
+                    <div>
+                        <h5>Food</h5>
+                        <h4>$399</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- end of fast payment -->
+            <canvas id="chart"></canvas>
         </section>
         <!-- End of main-middle -->
 
@@ -235,8 +343,19 @@
 
 
 
+
+
+        <!-- End of main-middle-->
+
+
+
     </main>
     <!------------ End of Main ---------------------->
+
+
+    <!-- Chart js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
