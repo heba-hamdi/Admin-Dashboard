@@ -1,9 +1,12 @@
-const chart = document.getElementById('chart').getContext('2d');
+
+
+
+
+
+let ctx = document.getElementById("chart");
 
 // create a new chart
-
-var ctx = document.getElementById("chart");
-var myChart = new Chart(ctx, {
+let myChart = new Chart(ctx, {
     type: "line",
     data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
@@ -30,6 +33,6 @@ var myChart = new Chart(ctx, {
                     beginAtZero: true
                 }
             }
-        }
+        },
     }
 });

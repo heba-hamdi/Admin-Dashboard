@@ -117,9 +117,17 @@ small {
     box-shadow: 0 0.8rem 0.8rem var(--color-primary-light);
 }
 
+.bg-primary-light{
+    background-color: var(--color-primary-light);
+}
+
 .bg-success {
     background-color: var(--color-success);
     box-shadow: 0 0.8rem 0.8rem var(--color-success-light);
+}
+
+.bg-success-light{
+    background-color: var(--color-success-light);
 }
 
 .bg-warning {
@@ -127,14 +135,26 @@ small {
     box-shadow: 0 0.8rem 0.8rem var(--color-warning-light);
 }
 
+.bg-warning-light{
+    background-color: var(--color-warning-light);
+}
+
 .bg-danger {
     background-color: var(--color-danger);
     box-shadow: 0 0.8rem 0.8rem var(--color-danger-light);
 }
 
+.bg-danger-light{
+    background-color: var(--color-danger-light);
+}
+
 .bg-purple {
     background-color: var(--color-purple);
     box-shadow: 0 0.8rem 0.8rem var(--color-purple-light);
+}
+
+.bg-purple-light{
+    background-color: var(--color-purple-light);
 }
 
 .bg-dark {
@@ -488,7 +508,7 @@ main .fast-payment .badge {
     transition: .3s all ease;
 }
 
-main .fast-payment .badge:hover{
+main .fast-payment .badge:hover {
     box-shadow: 0 0 1.5rem var(--color-primary-light);
     cursor: pointer;
 }
@@ -499,24 +519,121 @@ main .fast-payment .badge span {
     border-radius: 50%;
 }
 
-main .fast-payment .badge:first-child span{
+main .fast-payment .badge:first-child span {
     display: flex;
     align-self: center;
     justify-content: center;
     height: fit-content;
     font-size: 1.5rem;
 }
-main .fast-payment div{
+
+main .fast-payment div {
     display: flex;
     align-self: center;
     gap: 1rem;
 }
 
 /************* Chart*************/
-#chart{
+#chart {
     background-color: var(--color-white);
     max-width: 100%;
     margin-top: 2rem;
     border-radius: var(--card-border-radius);
     padding: var(--card-border-radius);
+}
+
+
+/***************** Investment*************************/
+
+main section.right .investments {
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+}
+
+main section.right .investments img {
+    width: 2.4rem;
+}
+
+main section.right .investments .header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--card-padding);
+    align-items: center;
+    padding-bottom: 0;
+}
+
+main section.right .investments .header a {
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+}
+
+main section.right .investments .investment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--card-padding);
+    border: 1px solid var(--color-light);
+}
+
+main section.right .investments .investment:last-child{
+    border: none;
+}
+
+main section.right .investments .investment:hover{
+    background-color: var(--color-light);
+    cursor: pointer;
+}
+
+
+/************ Recent Transactions **************/
+
+main .recent-tranasctions{
+    margin-top: 2rem;
+}
+
+main .recent-tranasctions .header{
+    display: flex;
+    justify-content: space-between  ;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+main .recent-tranasctions .header a{
+    display: flex;
+    align-items: center;
+}
+
+main .recent-tranasctions img{
+    width: 2.2rem;
+}
+
+main .recent-tranasctions .transaction{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-radius: var(--card-border-radius);
+    transition: 0.3s ease;
+}
+
+main .recent-tranasctions .transaction:hover{
+    background-color: var(--color-white);
+    cursor: pointer;
+}
+
+main .recent-tranasctions .transaction .icon{
+    padding: var(--padding-2);
+    border-radius: var(--border-radius-2);
+    display: flex;
+    align-items: center;
+}
+
+main .recent-tranasctions .transaction .card-details .card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.6rem;
+    height: 3rem;
+    border-radius: var(--border-radius-2);
 }
