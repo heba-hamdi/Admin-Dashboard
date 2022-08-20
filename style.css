@@ -23,6 +23,15 @@
     --card-border-radius: 1.6rem;
     --border-radius-1: 1rem;
     --border-radius-2: 6px;
+
+    /* Dark Theme Colors */
+}
+
+.dark-theme{
+    --color-white:#131316;
+    --color-light:#23232a;
+    --color-dark:#ddd;
+    --color-gray-dark:#adacb5;
 }
 
 * {
@@ -117,7 +126,7 @@ small {
     box-shadow: 0 0.8rem 0.8rem var(--color-primary-light);
 }
 
-.bg-primary-light{
+.bg-primary-light {
     background-color: var(--color-primary-light);
 }
 
@@ -126,7 +135,7 @@ small {
     box-shadow: 0 0.8rem 0.8rem var(--color-success-light);
 }
 
-.bg-success-light{
+.bg-success-light {
     background-color: var(--color-success-light);
 }
 
@@ -135,7 +144,7 @@ small {
     box-shadow: 0 0.8rem 0.8rem var(--color-warning-light);
 }
 
-.bg-warning-light{
+.bg-warning-light {
     background-color: var(--color-warning-light);
 }
 
@@ -144,7 +153,7 @@ small {
     box-shadow: 0 0.8rem 0.8rem var(--color-danger-light);
 }
 
-.bg-danger-light{
+.bg-danger-light {
     background-color: var(--color-danger-light);
 }
 
@@ -153,7 +162,7 @@ small {
     box-shadow: 0 0.8rem 0.8rem var(--color-purple-light);
 }
 
-.bg-purple-light{
+.bg-purple-light {
     background-color: var(--color-purple-light);
 }
 
@@ -568,7 +577,7 @@ main section.right .investments .header a {
     color: var(--color-primary);
 }
 
-main section.right .investments .investment{
+main section.right .investments .investment {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -576,11 +585,11 @@ main section.right .investments .investment{
     border: 1px solid var(--color-light);
 }
 
-main section.right .investments .investment:last-child{
+main section.right .investments .investment:last-child {
     border: none;
 }
 
-main section.right .investments .investment:hover{
+main section.right .investments .investment:hover {
     background-color: var(--color-light);
     cursor: pointer;
 }
@@ -588,27 +597,27 @@ main section.right .investments .investment:hover{
 
 /************ Recent Transactions **************/
 
-main .recent-tranasctions{
+main .recent-tranasctions {
     margin-top: 2rem;
 }
 
-main .recent-tranasctions .header{
+main .recent-tranasctions .header {
     display: flex;
-    justify-content: space-between  ;
+    justify-content: space-between;
     margin-bottom: 1rem;
     color: var(--color-primary);
 }
 
-main .recent-tranasctions .header a{
+main .recent-tranasctions .header a {
     display: flex;
     align-items: center;
 }
 
-main .recent-tranasctions img{
+main .recent-tranasctions img {
     width: 2.2rem;
 }
 
-main .recent-tranasctions .transaction{
+main .recent-tranasctions .transaction {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -617,19 +626,19 @@ main .recent-tranasctions .transaction{
     transition: 0.3s ease;
 }
 
-main .recent-tranasctions .transaction:hover{
+main .recent-tranasctions .transaction:hover {
     background-color: var(--color-white);
     cursor: pointer;
 }
 
-main .recent-tranasctions .transaction .icon{
+main .recent-tranasctions .transaction .icon {
     padding: var(--padding-2);
     border-radius: var(--border-radius-2);
     display: flex;
     align-items: center;
 }
 
-main .recent-tranasctions .transaction .card-details .card{
+main .recent-tranasctions .transaction .card-details .card {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -640,70 +649,104 @@ main .recent-tranasctions .transaction .card-details .card{
 
 /******** Media Query for Tablets********/
 @media screen and (max-width: 1024px) {
-    nav .search-bar{
+    nav .search-bar {
         display: none;
     }
 
-    nav .profile-area{
-        gap:2rem;
+    nav .profile-area {
+        gap: 2rem;
     }
 
-    nav .profile-area button#menu-btn{
+    nav .profile-area button#menu-btn {
         display: inline;
         background-color: transparent;
         color: var(--color-dark);
     }
 
-    main{
+    main {
         grid-template-columns: 1fr;
     }
 
-    main aside{
+    main aside {
         position: fixed;
         z-index: 3;
         top: 0;
-        left: 0;
+        left: -100%;
         background-color: var(--color-white);
         width: 22rem;
         height: 100vh;
         box-shadow: 2rem 0 2rem var(--color-primary-light);
         display: none;
+        animation:showSideBar  500ms ease forwards;
     }
 
-    main aside button#close-btn{
+    @keyframes showSideBar{
+        0%{
+            left:-100;
+        }
+        100%{
+            left:0;
+        }
+    }
+
+
+    main aside button#close-btn {
         display: inline-block;
         width: 3rem;
         height: 3rem;
         position: absolute;
-        top:1rem;
+        top: 1rem;
         right: 1rem;
         z-index: 4;
         background-color: transparent;
-        color: var( --color-dark);
+        color: var(--color-dark);
     }
 
-    button:hover{
+    button:hover {
         cursor: pointer;
     }
 
-    main aside .side-bar{
+    main aside .side-bar {
         margin-top: 4rem;
     }
 
-    main aside .updates{
+    main aside .updates {
+        display: none;
+    }
+
+    main section.middle .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main canvas {
+        margin: 3rem 0 1rem;
+    }
+
+    main section.right .recent-tranasctions {
+        margin-top: 3rem;
+    }
+}
+
+/******** Media Query for Tablets********/
+
+@media screen and (max-width:600px){
+    nav .profile-area{
+        gap:2.6rem;
+    }
+
+    nav .profile h5, 
+    nav .profile span{
         display: none;
     }
 
     main section.middle .cards{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
-    main canvas{
-        margin:3rem 0 1rem;
-    }
-
-    main section.right .recent-tranasctions{
+    main section.middle .fast-payment{
+        flex-direction: column;
+        align-items: flex-start;
         margin-top:3rem;
+        gap:1.4rem;
     }
-    
-  }
+}
